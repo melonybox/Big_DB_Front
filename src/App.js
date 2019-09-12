@@ -3,6 +3,7 @@ import { Switch, Route} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {getUsersFetch} from './actions/action';
 import HeaderBox from './containers/headerBox';
+import ListBox from './containers/listBox';
 
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
     return (
       <div>
         <HeaderBox />
+        <ListBox />
         <Switch>
         </Switch>
       </div>

@@ -1,7 +1,5 @@
-"component / container folders, header redone to be in a container and pure component,"
+"listBox, listComponent, initial test list renders, use map instead of forEach, forEach returns undefined"
 
 
-get the list to display on page.
-
-list container.
+convert list to an ordered list.
 actual list as display cards.

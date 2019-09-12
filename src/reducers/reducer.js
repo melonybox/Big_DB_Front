@@ -9,5 +9,5 @@ export default function reducer(state = initialState, action) {
         return {...state, loadedList: action.payload}
       default:
         return state;
-    }
   }
+}
