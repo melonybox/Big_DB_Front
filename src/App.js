@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Switch, Route} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {getUsersFetch} from './actions/action';
+import HeaderBox from './containers/headerBox';
+
 
 class App extends Component {
 
@@ -12,8 +14,8 @@ class App extends Component {
 
   render() {
     return (
-      <div style={{display: "flex",justifyContent: "center",flexDirection: "column",alignItems: "center"}}>
-        <p>BIG DB TEST</p>
+      <div>
+        <HeaderBox />
         <Switch>
         </Switch>
       </div>

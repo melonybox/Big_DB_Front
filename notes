@@ -1,1 +1,7 @@
-"get user list action code added and reducer code added, initial list load onto state working"
+"component / container folders, header redone to be in a container and pure component,"
+
+
+get the list to display on page.
+
+list container.
+actual list as display cards.
