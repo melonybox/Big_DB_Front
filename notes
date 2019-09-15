@@ -1,5 +1,6 @@
-"listBox, listComponent, initial test list renders, use map instead of forEach, forEach returns undefined"
+"displayed list is now an ordered list."
 
 
 convert list to an ordered list.
-actual list as display cards.
+
+setup 10 item parsing of list.

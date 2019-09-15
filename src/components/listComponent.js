@@ -5,15 +5,15 @@ class ListComponent extends React.PureComponent {
 
   render() {
     return (
-      <div>
+      <ol>
       {this.props.loadedList.map((entry,idx) => {
         return (
-          <div key={idx}>
+          <li key={idx}>
             <p>{entry.name_first} {entry.name_last}</p>
-          </div>
+          </li>
         )
       })}
-      </div>
+      </ol>
     )
   }
 
