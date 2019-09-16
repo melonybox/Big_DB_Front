@@ -1,4 +1,4 @@
-"displayed list is now an ordered list."
+"added viewCount and currentPage to reducer state"
 
 
 convert list to an ordered list.
