@@ -1,6 +1,3 @@
-"added viewCount and currentPage to reducer state"
+"added totalPages to reducer, creating fetch action to get per amount by state, said state action shows on page"
 
-
-convert list to an ordered list.
-
-setup 10 item parsing of list.
+setup 10 item parsing of list with current page.
