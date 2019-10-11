@@ -18,9 +18,9 @@ export const getUsersFetch = () => {
   }
 }
 
-export const getUsersAmountFetch = (amount) => {
+export const getUsersAmountFetch = (amount,page) => {
   return dispatch => {
-    return fetch(`http://localhost:3000/api/v1/userlist/${amount}`, {
+    return fetch(`http://localhost:3000/api/v1/userlist/${amount}/${page}`, {
       method: "GET",
       headers: {
         'Content-Type': 'application/json',

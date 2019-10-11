@@ -2,7 +2,7 @@ const initialState = {
   loadedList: [],
   totalPages: 0,
   viewCount: 10,
-  currentPage: 0
+  currPage: 0
 }
 
 export default function reducer(state = initialState, action) {
