@@ -9,6 +9,8 @@ export default function reducer(state = initialState, action) {
     switch (action.type) {
       case 'FILL_LIST':
         return {...state, loadedList: action.payload[0], totalPages: action.payload[1]}
+      case 'PAGE_NUM_CHANGE':
+        return {...state, currPage: action.payload}
       default:
         return state;
   }

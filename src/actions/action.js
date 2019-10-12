@@ -42,3 +42,8 @@ export const fillList = data => ({
     type: 'FILL_LIST',
     payload: data
 })
+
+export const pageNumChange = data => ({
+    type: 'PAGE_NUM_CHANGE',
+    payload: data
+})
