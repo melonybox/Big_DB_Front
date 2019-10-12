@@ -16,7 +16,6 @@ class ListComponent extends React.PureComponent {
       </ol>
     )
   }
-
 }
 
 const mapStateToProps = state => ({

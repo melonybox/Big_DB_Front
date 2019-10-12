@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ListComponent from '../components/listComponent';
+import PageComponent from '../components/pageComponent';
 
 class ListBox extends Component {
 
@@ -10,7 +11,7 @@ class ListBox extends Component {
         <ListComponent />
           <div style={{display: "flex",flexDirection: "row"}}>
             {[...Array(5)].map((e, i) => {
-              return <p key={i}>{i+1}</p>
+              return <PageComponent key={i} pageNum={i+1} />
             })}
           </div>
       </div>
