@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 import ListComponent from '../components/listComponent';
 import PageComponent from '../components/pageComponent';
 
@@ -11,7 +12,7 @@ class ListBox extends Component {
         <ListComponent />
           <div style={{display: "flex",flexDirection: "row"}}>
             {[...Array(5)].map((e, i) => {
-              return <PageComponent key={i} pageNum={i+1} />
+              return <PageComponent key={i} pageNum={i+1} viewCount={this.props.viewCount} />
             })}
           </div>
       </div>
@@ -19,4 +20,8 @@ class ListBox extends Component {
   }
 }
 
-export default ListBox;
+const mapStateToProps = state => ({
+  viewCount: state.viewCount
+})
+
+export default connect(mapStateToProps)(ListBox);
