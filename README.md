@@ -19,4 +19,7 @@ To ensure all the required packages are installed for this project.
 ### `npm start`
 
 Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+When "Would you like to run the app on another port instead? (y/n)" appears.
+Input "y"
+
+Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
