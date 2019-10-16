@@ -9,6 +9,9 @@ This is the front end portion to https://github.com/melonybox/Big_DB_Back.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 This portion uses:<br>
+javascript<br>
+html<br>
+css<br>
 react<br>
 react-dom<br>
 react-redux<br>
