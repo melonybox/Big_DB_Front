@@ -4,7 +4,8 @@
 
 This project currently is a small DB test, starting 50 and later to be scaled up to 10k or so. Purpose is to learn pagination both in function / action and displaying it. With sorting and search to be added after.
 
-This is the front end portion to https://github.com/melonybox/Big_DB_Back.
+This is the front end portion to https://github.com/melonybox/Big_DB_Back.<br>
+Front end portion should be started last.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
