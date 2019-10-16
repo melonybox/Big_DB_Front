@@ -28,7 +28,7 @@ To ensure all the required packages are installed for this project.
 ### `npm start`
 
 Runs the app in the development mode.<br>
-When "Would you like to run the app on another port instead? (y/n)" appears.
+When "Would you like to run the app on another port instead? (y/n)" appears.<br>
 Input "y"
 
 Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
