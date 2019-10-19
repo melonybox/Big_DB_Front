@@ -8,9 +8,7 @@ class ListComponent extends React.PureComponent {
       <ol>
       {this.props.loadedList.map((entry,idx) => {
         return (
-          <li key={idx}>
-            <p>{entry.name_first} {entry.name_last}</p>
-          </li>
+          <li key={idx}>{entry.name_first} {entry.name_last}</li>
         )
       })}
       </ol>

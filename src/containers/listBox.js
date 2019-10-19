@@ -4,24 +4,25 @@ import ListComponent from '../components/listComponent';
 import PageComponent from '../components/pageComponent';
 
 class ListBox extends Component {
+  state = {
+    currPage: this.props.currPage
+  }
 
 
   render() {
     return (
       <div style={{display: "flex",justifyContent: "center",flexDirection: "column",alignItems: "center"}}>
         <ListComponent />
-          <div style={{display: "flex",flexDirection: "row"}}>
-            {[...Array(5)].map((e, i) => {
-              return <PageComponent key={i} pageNum={i+1} viewCount={this.props.viewCount} />
-            })}
-          </div>
+        <PageComponent totalPages={this.props.totalPages} viewCount={this.props.viewCount} currPage={this.props.currPage}/>
       </div>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  viewCount: state.viewCount
+  viewCount: state.viewCount,
+  totalPages: state.totalPages,
+  currPage: state.currPage
 })
 
 export default connect(mapStateToProps)(ListBox);
