@@ -1,7 +1,7 @@
 const initialState = {
   loadedList: [],
   totalPages: 0,
-  viewCount: 10,
+  viewCount: 5,
   currPage: 0
 }
 
