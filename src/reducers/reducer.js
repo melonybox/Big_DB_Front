@@ -8,7 +8,7 @@ const initialState = {
 export default function reducer(state = initialState, action) {
     switch (action.type) {
       case 'FILL_LIST':
-        return {...state, loadedList: action.payload[0], totalPages: action.payload[1]}
+        return {...state, loadedList: action.payload[0], totalPages: action.payload[1], currPage: action.payload[2]}
       case 'PAGE_NUM_CHANGE':
         return {...state, currPage: action.payload}
       default:

@@ -11,6 +11,7 @@ class PageComponent extends React.PureComponent {
   render() {
     return (
       <div style={{display: "flex",flexDirection: "row"}}>
+      <p>{this.props.currPage + 1}</p>
         {[...Array(this.props.totalPages)].map((e, i) => {
           return <p onClick={this.handleClick.bind(this, this.props.viewCount,i)} style={{cursor: "pointer", margin: "0.5rem"}}>{i+1}</p>
         })}
