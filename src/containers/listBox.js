@@ -10,11 +10,12 @@ class ListBox extends Component {
     return <div style={{display: "flex",flexDirection: "row"}}>
       {[...Array(5)].map((e, i) => {
         if (this.props.currPage < 3) {
-          return <p>{i+1}</p>
+          return <PageComponent key={i} pageNum={i+1} viewCount={this.props.viewCount} />
         } else if (this.props.currPage+3 > this.props.totalPages) {
-          return <p>{((this.props.totalPages-5)+i)+1}</p>
+          return <PageComponent key={i} pageNum={((this.props.totalPages-5)+i)+1} viewCount={this.props.viewCount} />
         } else {
-          return <p>{((this.props.currPage-2)+i)+1}</p>
+          return <PageComponent key={i} pageNum={((this.props.currPage-2)+i)+1} viewCount={this.props.viewCount} />
+
         }
       })}
     </div>
