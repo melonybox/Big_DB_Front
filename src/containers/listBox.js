@@ -11,8 +11,11 @@ class ListBox extends Component {
       {[...Array(5)].map((e, i) => {
         if (this.props.currPage < 3) {
           return <p>{i+1}</p>
+        } else if (this.props.currPage+3 > this.props.totalPages) {
+          return <p>{((this.props.totalPages-5)+i)+1}</p>
+        } else {
+          return <p>{((this.props.currPage-2)+i)+1}</p>
         }
-        return <p>{((this.props.currPage-2)+i)+1}</p>
       })}
     </div>
   }
