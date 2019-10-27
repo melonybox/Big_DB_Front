@@ -6,14 +6,13 @@ import PageComponent from '../components/pageComponent';
 class ListBox extends Component {
 
   handleHi = () => {
-    let newArray = Array(5).map((e) => {
-      debugger
-      return e = this.props.currPage+1
-    })
 
     return <div style={{display: "flex",flexDirection: "row"}}>
-      {[...newArray].map((e, i) => {
-        return <p>{e} | {i}</p>
+      {[...Array(5)].map((e, i) => {
+        if (this.props.currPage < 3) {
+          return <p>{i+1}</p>
+        }
+        return <p>{((this.props.currPage-2)+i)+1}</p>
       })}
     </div>
   }
