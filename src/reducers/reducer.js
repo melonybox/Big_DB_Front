@@ -3,7 +3,9 @@ const initialState = {
   totalPages: 0,
   viewCount: 10,
   currPage: 0,
-  pageList: []
+  pageList: [],
+  listSortType: "id",
+  listSortOrder: "ASC"
 }
 
 export default function reducer(state = initialState, action) {
