@@ -11,7 +11,7 @@ class App extends Component {
   componentDidMount = () => {
     // this.props.getUsersFetch()
     console.log("App Component Run")
-    this.props.getUsersAmountFetch(this.props.viewCount,this.props.currPage)
+    this.props.getUsersAmountFetch(this.props.viewCount,this.props.currPage,this.props.listSortType,this.props.listSortOrder)
   }
 
   render() {
@@ -28,12 +28,14 @@ class App extends Component {
 
 const mapStateToProps = state => ({
   viewCount: state.viewCount,
-  currPage: state.currPage
+  currPage: state.currPage,
+  listSortType: state.listSortType,
+  listSortOrder: state.listSortOrder
 })
 
 const mapDispatchToProps = dispatch => ({
   getUsersFetch: () => dispatch(getUsersFetch()),
-  getUsersAmountFetch: (amount,page) => dispatch(getUsersAmountFetch(amount,page))
+  getUsersAmountFetch: (amount,page,type,order) => dispatch(getUsersAmountFetch(amount,page,type,order))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
