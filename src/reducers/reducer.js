@@ -4,7 +4,7 @@ const initialState = {
   viewCount: 10,
   currPage: 0,
   pageList: [],
-  listSortType: "id",
+  listSortType: "name_first",
   listSortOrder: "ASC"
 }
 
