@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {getUsersFetch, getUsersAmountFetch} from './actions/action';
 import HeaderBox from './containers/headerBox';
 import ListBox from './containers/listBox';
+import NavBox from './containers/navBox';
 
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
     return (
       <div>
         <HeaderBox />
+        <NavBox />
         <ListBox />
         <Switch>
         </Switch>
