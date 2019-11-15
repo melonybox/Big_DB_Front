@@ -47,3 +47,13 @@ export const pageNumChange = data => ({
     type: 'PAGE_NUM_CHANGE',
     payload: data
 })
+
+export const listSortTypeFunc = data => ({
+    type: 'LIST_SORT_TYPE_FUNC',
+    payload: data
+})
+
+export const listSortOrderFunc = data => ({
+    type: 'LIST_SORT_ORDER_FUNC',
+    payload: data
+})
