@@ -1,11 +1,18 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {listSortTypeFunc, listSortOrderFunc, getUsersAmountFetch} from '../actions/action';
+import {getUsersAmountFetch} from '../actions/action';
 
 class NavComponent extends React.PureComponent {
   handleChangeType = (event) => {
-    this.props.listSortTypeFunc(event.target.value)
-    // this.props.getUsersAmountFetch(this.props.viewCount,0,this.props.listSortTypeFunc(event.target.value),this.props.listSortOrder)
+    this.props.getUsersAmountFetch(this.props.viewCount,0,event.target.value,this.props.listSortOrder)
+  }
+
+  handleChangeOrder = (event) => {
+    this.props.getUsersAmountFetch(this.props.viewCount,0,this.props.listSortType,event.target.value)
+  }
+
+  handleChangeCount = (event) => {
+    this.props.getUsersAmountFetch(event.target.value,0,this.props.listSortType,this.props.listSortOrder)
   }
 
   render() {
@@ -20,9 +27,17 @@ class NavComponent extends React.PureComponent {
         </div>
         <div style={{display: "flex",justifyContent: "center",flexDirection: "row",alignItems: "center"}}>
           <p>Sort Order:</p>
-          <select>
+          <select onChange={this.handleChangeOrder}>
             <option value="ASC">A -> Z</option>
             <option value="DESC">Z -> A</option>
+          </select>
+        </div>
+        <div style={{display: "flex",justifyContent: "center",flexDirection: "row",alignItems: "center"}}>
+          <p>View Count:</p>
+          <select onChange={this.handleChangeCount}>
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
           </select>
         </div>
       </div>
@@ -37,8 +52,6 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  listSortTypeFunc: (data) => dispatch(listSortTypeFunc(data)),
-  listSortOrderFunc: (data) => dispatch(listSortOrderFunc(data)),
   getUsersAmountFetch: (amount,pageNum,type,order) => dispatch(getUsersAmountFetch(amount,pageNum,type,order))
 })
 
