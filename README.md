@@ -7,6 +7,8 @@ This project currently is a small DB test, starting 50 and later to be scaled up
 This is the front end portion to https://github.com/melonybox/Big_DB_Back.<br>
 Front end portion should be started last.
 
+Video Demo: https://youtu.be/gsLhSQRRlO0
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 This portion uses:<br>
